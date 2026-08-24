@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middlewares/auth');
 const asyncHandler = require('../middlewares/asyncHandler');
-const { getContacts, createContact, deleteContact } = require('../controllers/contactController');
+const { getContacts, createContact, deleteContact } = require('../controllers/ContactController');
 
 // Every route below requires a valid JWT — applied once here so it's
 // never accidentally forgotten on an individual route.
