@@ -12,7 +12,7 @@ const sosRoutes = require('./routes/sos.route.js');
 const linkRoutes = require('./routes/links.js');
 
 const app = express();
-const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
+const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'safeher-beta.vercel.app';
 
 app.use(cors({ origin: CLIENT_ORIGIN }));
 app.use(express.json());
