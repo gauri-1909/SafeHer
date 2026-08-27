@@ -14,6 +14,7 @@ const linkRoutes = require('./routes/links.js');
 const app = express();
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'https://safeher-beta.vercel.app';
 
+
 app.use(cors({ origin: CLIENT_ORIGIN }));
 app.use(express.json());
 
