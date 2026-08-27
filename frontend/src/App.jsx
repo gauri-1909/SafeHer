@@ -5,6 +5,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import Landing from './pages/Landing';
+
 
 // Needs to sit inside AuthProvider (to read the token via useAuth) but
 // outside Routes, so the socket connection persists across navigation
@@ -16,6 +18,7 @@ function AppRoutes() {
     <SocketProvider token={token}>
       <BrowserRouter>
         <Routes>
+           <Route path="/" element={<Landing/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route
@@ -32,6 +35,7 @@ function AppRoutes() {
     </SocketProvider>
   );
 }
+
 
 export default function App() {
   return (
